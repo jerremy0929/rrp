@@ -1,12 +1,12 @@
 import React from 'react'
 import { withRouter, RouteComponentProps } from 'react-router-dom'
 
-const ColorSwatch = (
-  props: RouteComponentProps & {
+const ColorSwatch: React.FC<
+  RouteComponentProps & {
     text: string
     color: string
-  },
-) => {
+  }
+> = props => {
   const style: React.CSSProperties = {
     padding: 20,
     margin: 15,

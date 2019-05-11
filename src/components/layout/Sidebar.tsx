@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom'
 
 const links = [
   { name: 'Home', url: '/', exact: true },
+  { name: 'Logging', url: '/logging', exact: false },
   { name: 'Color', url: '/color', exact: false },
   { name: 'Prompt', url: '/prompt', exact: false },
   { name: 'Props', url: '/props', exact: false },
