@@ -1,7 +1,9 @@
 import React from 'react'
-import { Link, Route, RouteComponentProps } from 'react-router-dom'
+import { Route, RouteComponentProps } from 'react-router-dom'
 import LoggingDefaultMessage from './LoggingDefaultMessage'
 import LoggingLink from './LoggingLink'
+import LoggingRoute from './LoggingRoute';
+import Lorem from './Lorem';
 
 const LoggingHome: React.FC<RouteComponentProps> = ({ match }) => {
   return (
@@ -21,6 +23,7 @@ const LoggingHome: React.FC<RouteComponentProps> = ({ match }) => {
         </LoggingLink>
       </h4>
 
+      <LoggingRoute path={`${match.url}/lorem/:eid`} component={Lorem} />
       <Route
         path={`${match.url}`}
         component={LoggingDefaultMessage}
