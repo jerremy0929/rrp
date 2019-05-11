@@ -6,6 +6,7 @@ a.activeNavLink {
 }
 
 a.navLink {
+  display: block;
   font-size: 18px;
   list-style-type: none;
   color: #ffffff;

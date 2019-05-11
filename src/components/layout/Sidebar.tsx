@@ -7,6 +7,9 @@ const Sidebar = () => {
       <Link className="navLink" to="/">
         Home
       </Link>
+      <Link className="navLink" to="/prompt">
+        Prompt
+      </Link>
     </div>
   )
 }
