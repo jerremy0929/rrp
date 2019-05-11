@@ -1,18 +1,23 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 const Sidebar = () => {
   return (
     <div className="leftNavContainer">
-      <Link className="navLink" to="/">
+      <NavLink
+        activeClassName="activeNavLink"
+        className="navLink"
+        to="/"
+        exact={true}
+      >
         Home
-      </Link>
-      <Link className="navLink" to="/prompt">
+      </NavLink>
+      <NavLink activeClassName="activeNavLink" className="navLink" to="/prompt">
         Prompt
-      </Link>
-      <Link className="navLink" to="/props">
+      </NavLink>
+      <NavLink activeClassName="activeNavLink" className="navLink" to="/props">
         Props
-      </Link>
+      </NavLink>
     </div>
   )
 }
