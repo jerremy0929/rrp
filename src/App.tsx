@@ -1,17 +1,23 @@
 import React from 'react'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
+import Home from './components/Home'
 import Header from './components/layout/Header'
 import Sidebar from './components/layout/Sidebar'
 
 const App = () => {
   return (
-    <div>
-      <Header />
-      <Sidebar />
-      <div className="rightContentContainer">
-        <h1>Welcome to the Course</h1>
+    <Router>
+      <div>
+        <Header />
+        <Sidebar />
+        <div className="rightContentContainer">
+          <Switch>
+            <Route path="/" component={Home} exact={true} />
+          </Switch>
+        </div>
       </div>
-    </div>
+    </Router>
   )
 }
 
