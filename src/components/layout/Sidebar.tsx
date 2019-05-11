@@ -1,23 +1,31 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
+const links = [
+  { name: 'Home', url: '/', exact: true },
+  { name: 'Color', url: '/color', exact: false },
+  { name: 'Prompt', url: '/prompt', exact: false },
+  { name: 'Props', url: '/props', exact: false },
+  { name: '404 Error', url: '/foo', exact: false },
+]
+
 const Sidebar = () => {
   return (
     <div className="leftNavContainer">
-      <NavLink
-        activeClassName="activeNavLink"
-        className="navLink"
-        to="/"
-        exact={true}
-      >
-        Home
-      </NavLink>
-      <NavLink activeClassName="activeNavLink" className="navLink" to="/prompt">
-        Prompt
-      </NavLink>
-      <NavLink activeClassName="activeNavLink" className="navLink" to="/props">
-        Props
-      </NavLink>
+      <ul>
+        {links.map((link, idx) => (
+          <li className="nav" key={idx}>
+            <NavLink
+              activeClassName="activeNavLink"
+              className="navLink"
+              to={link.url}
+              exact={link.exact}
+            >
+              {link.name}
+            </NavLink>
+          </li>
+        ))}
+      </ul>
     </div>
   )
 }
