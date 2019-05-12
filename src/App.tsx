@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import Home from './components/Home'
 import LoggingHome from './components/logging/LoggingHome'
-import ColorSwatch from './components/ColorSwatch'
+import ColorSwatch from './components/color/ColorSwatch'
 import Header from './components/layout/Header'
 import Sidebar from './components/layout/Sidebar'
 import NameForm from './components/prompt/NameForm'
@@ -13,6 +13,7 @@ import PrivateRoute from './components/secure/PrivateRoute'
 import ProtectedHome from './components/secure/ProtectedHome'
 import Login from './components/secure/Login'
 import Logout from './components/secure/Logout'
+import SmartColorSwatch from './components/color/SmartColorSwatch'
 
 const App = () => {
   const renderColor = () => <ColorSwatch color="#f00" text="Red" />
@@ -26,6 +27,7 @@ const App = () => {
           <Switch>
             <Route path="/" component={Home} exact={true} />
             <Route path="/logging" component={LoggingHome} />
+            <Route path="/color/:text/:color" component={SmartColorSwatch} />
             <Route path="/color" render={renderColor} />
             <Route path="/prompt" component={NameForm} />
             <Route path="/props" component={PropViewer} />
