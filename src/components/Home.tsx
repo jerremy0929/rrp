@@ -1,18 +1,12 @@
 import React from 'react'
+import codelife from '../assets/codelife.png'
 
-const imgStyle: React.CSSProperties = {
-  width: 500,
-  marginTop: 50,
-  textAlign: 'center',
-}
-
-const Home = () => {
+const Home: React.FC = () => {
   return (
-    <img
-      style={imgStyle}
-      src={require('../assets/codelife.png')}
-      alt="codelife"
-    />
+    <div>
+      <img src={codelife} alt="codelife" />
+      <h3>People and Places</h3>
+    </div>
   )
 }
 
