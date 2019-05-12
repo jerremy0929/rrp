@@ -2,8 +2,8 @@ import React from 'react'
 import { Route, RouteComponentProps } from 'react-router-dom'
 import LoggingDefaultMessage from './LoggingDefaultMessage'
 import LoggingLink from './LoggingLink'
-import LoggingRoute from './LoggingRoute';
-import Lorem from './Lorem';
+import LoggingRoute from './LoggingRoute'
+import Lorem from './Lorem'
 
 const LoggingHome: React.FC<RouteComponentProps> = ({ match }) => {
   return (

@@ -1,18 +1,16 @@
 import React from 'react'
-import { Route, RouteComponentProps } from 'react-router-dom'
+import { Route, RouteComponentProps, RouteProps } from 'react-router-dom'
 
-const LoggingRoute: React.FC<{
-  component: React.ComponentType<
-    Pick<RouteComponentProps<{ eid: string }>, any>
-  >
-  path: string
-}> = ({ component: Component, path }) => {
+const LoggingRoute = ({ component: Component, ...rest }: RouteProps) => {
   const renderFn = (props: RouteComponentProps<{ eid: string }>) => {
+    if (!Component) {
+      throw Error('component is undefined')
+    }
     alert(`Route is logging: ${props.match.params.eid}`)
     return <Component {...props} />
   }
 
-  return <Route path={path} render={renderFn} />
+  return <Route {...rest} render={renderFn} />
 }
 
 export default LoggingRoute

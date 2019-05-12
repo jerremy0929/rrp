@@ -9,6 +9,10 @@ import Sidebar from './components/layout/Sidebar'
 import NameForm from './components/prompt/NameForm'
 import PropViewer from './components/PropViewer'
 import PageNotFound from './components/PageNotFound'
+import PrivateRoute from './components/secure/PrivateRoute'
+import ProtectedHome from './components/secure/ProtectedHome'
+import Login from './components/secure/Login'
+import Logout from './components/secure/Logout'
 
 const App = () => {
   const renderColor = () => <ColorSwatch color="#f00" text="Red" />
@@ -25,6 +29,9 @@ const App = () => {
             <Route path="/color" render={renderColor} />
             <Route path="/prompt" component={NameForm} />
             <Route path="/props" component={PropViewer} />
+            <PrivateRoute path="/private" component={ProtectedHome} />
+            <Route path="/login" component={Login} />
+            <Route path="/logout" component={Logout} />
             <Route component={PageNotFound} />
           </Switch>
         </div>

@@ -16,7 +16,8 @@
     "react-dom": "^16.8.6",
     "react-router-dom": "^4.3.1",
     "react-scripts": "3.0.0",
-    "typescript": "^3.4.5"
+    "typescript": "^3.4.5",
+    "universal-cookie": "^4.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -42,6 +43,7 @@
   "devDependencies": {
     "@types/react-bootstrap": "^0.32.17",
     "@types/react-router-dom": "^4.3.3",
+    "@types/universal-cookie": "^2.2.0",
     "prettier": "^1.17.0",
     "tslint": "^5.16.0",
     "tslint-config-airbnb": "^5.11.1",
