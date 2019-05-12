@@ -5,6 +5,7 @@ const links = [
   { name: 'Home', url: '/', exact: true },
   { name: 'Color', url: '/color', exact: false },
   { name: 'Smart Color', url: '/color/Green/00ff00', exact: false },
+  { name: 'People', url: '/people' },
   { name: 'Prompt', url: '/prompt', exact: false },
   { name: 'Props', url: '/props', exact: false },
   { name: 'Logging', url: '/logging', exact: false },

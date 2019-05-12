@@ -14,6 +14,8 @@ import ProtectedHome from './components/secure/ProtectedHome'
 import Login from './components/secure/Login'
 import Logout from './components/secure/Logout'
 import SmartColorSwatch from './components/color/SmartColorSwatch'
+import People from './components/people/People'
+import PersonProfileContainer from './container/PersonProfileContainer'
 
 const App = () => {
   const renderColor = () => <ColorSwatch color="#f00" text="Red" />
@@ -29,6 +31,8 @@ const App = () => {
             <Route path="/logging" component={LoggingHome} />
             <Route path="/color/:text/:color" component={SmartColorSwatch} />
             <Route path="/color" render={renderColor} />
+            <Route path="/people/:id" component={PersonProfileContainer} />
+            <Route path="/people" component={People} />
             <Route path="/prompt" component={NameForm} />
             <Route path="/props" component={PropViewer} />
             <PrivateRoute path="/private" component={ProtectedHome} />
